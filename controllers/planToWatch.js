@@ -24,7 +24,11 @@ router.get('/new/:id', (req, res) => {
     })
 })
 //DELETE
-
+router.delete('/:id', (req, res) => {
+    planToWatch.findByIdAndDelete(req.params.id, () => {
+        res.redirect('/plantowatch')
+    })
+})
 //UPDATE
 
 //CREATE
