@@ -1,9 +1,10 @@
 <h1>
     Your Plan To Watchlist
 </h1>
+<button><a href="/anime">Anime List</a></button>
 <div>
    <% for(i = 0; i < anime.length; i++) { %> 
-    <img src="<%= anime[i].image %> " alt="">
+    <a href="/anime/<%=anime[i].mal_id%>"><img src="<%= anime[i].image %> " alt=""></a>
     <%= anime[i].title %> 
     <% } %> 
 </div>

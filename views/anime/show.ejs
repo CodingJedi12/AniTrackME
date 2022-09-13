@@ -6,10 +6,8 @@
   </head>
   <body>
     <h1><%= anime.data.title %></h1> 
-    <!-- tossing error on title but is still populating -->
     <h2>Score: <%= anime.data.score %>/10</h2>
     <img src="<%=anime.data.images.jpg.large_image_url%>" alt="">
-    <!-- <p>Genres: </p> -->
     <p>Synopsis: <%=anime.data.synopsis%></p>
   </body>
   <button><a href="/plantowatch/new/<%=anime.data.mal_id%>">Add to List</a></button>

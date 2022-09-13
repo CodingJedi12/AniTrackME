@@ -6,7 +6,6 @@ const planToWatch = require('../models/planToWatch.js');
 //INDEX
 router.get('/', (req, res) => {
     planToWatch.find({}, (err, anime) => {
-        console.log(anime)
         res.render('planToWatch/index.ejs', {
             anime: anime,
         });
@@ -30,7 +29,6 @@ router.get('/new/:id', (req, res) => {
 
 //CREATE
 router.post('/', (req, res) => {
-    console.log(req.body)
     planToWatch.create(req.body, (err, createdAnime) => {
         res.redirect('/plantowatch');
     })

@@ -4,6 +4,7 @@
     Image Url: <input type="text" name="image" value="<%=anime.data.images.jpg.large_image_url%>">
     Synopsis: <input type="text" name="synopsis" value="<%=anime.data.synopsis%>">
     Score: <input type="number" name="score" value="<%= anime.data.score %>">
+    ID: <input type="number" name="mal_id" value="<%= anime.data.mal_id %>">
     <input type="submit" value="Add to Plan to Watch" />
 </form>
 <button><a href="/anime/<%=anime.data.mal_id%>">No</a></button>
