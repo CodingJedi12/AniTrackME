@@ -13,16 +13,8 @@ router.get('/', (req, res) => {
 })
 
 //NEW
-router.get('/new/:id', (req, res) => {
-    fetch(`https://api.jikan.moe/v4/anime/${req.params.id}`)
-    .then((response) => response.json())
-    .then((data) => {
-        res.render('plantowatch/new.ejs', {
-            anime: data,
-            // genres: data.data.genres.map(g => g.name).join(', '), //maps out the .name values to the g array
-        })
-    })
-})
+
+
 //DELETE
 router.delete('/:id', (req, res) => {
     planToWatch.findByIdAndDelete(req.params.id, () => {
