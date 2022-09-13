@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/public/style.css">
   <head>
     <meta charset="utf-8" />
     <title> AniTrackMe | <%= anime.data.title %></title>
@@ -10,11 +10,8 @@
     <!-- tossing error on title but is still populating -->
     <h2>Score: <%= anime.data.score %>/10</h2>
     <img src="<%=anime.data.images.jpg.large_image_url%>" alt="">
-    <p>Genres: 
-        <%for (i = 0; i < anime.data.genres.length; i ++) { %>
-            <%= anime.data.genres[i].name;%><%if (i !== anime.data.genres.length - 1) { %>,
-           <% }%>
-       <% } %>
+    <p>
+        Genres: <%= genres %>
     </p>
     <p>Synopsis: <%=anime.data.synopsis%></p>
   </body>
