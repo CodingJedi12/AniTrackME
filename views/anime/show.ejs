@@ -10,14 +10,10 @@
     <!-- tossing error on title but is still populating -->
     <h2>Score: <%= anime.data.score %>/10</h2>
     <img src="<%=anime.data.images.jpg.large_image_url%>" alt="">
-    <p>Genres: 
-        <%for (i = 0; i < anime.data.genres.length; i ++) { %>
-            <%= anime.data.genres[i].name;%><%if (i !== anime.data.genres.length - 1) { %>,
-           <% }%>
-       <% } %>
-    </p>
+    <!-- <p>Genres: </p> -->
     <p>Synopsis: <%=anime.data.synopsis%></p>
   </body>
+  <button><a href="/plantowatch/new/<%=anime.data.mal_id%>">Add to List</a></button>
   <button><a href="/">Back to Anime</a></button>
 </html>
 

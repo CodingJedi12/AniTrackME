@@ -11,7 +11,8 @@ require('dotenv').config();
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-const animeController = require('./controllers/anime.js')
+const animeController = require('./controllers/anime.js');
+const planToWatchController = require('./controllers/planToWatch.js')
 
 //==========================
 //DATABASE CONNECTION
@@ -30,6 +31,7 @@ db.on('disconnected', () => console.log('disconnected'));
 //ROUTES
 //==========================
 app.use('/', animeController);
+app.use('/plantowatch', planToWatchController);
 
 //==========================
 //CAN YOUU HEARRR MEEE
