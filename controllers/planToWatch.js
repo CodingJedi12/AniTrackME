@@ -30,13 +30,8 @@ router.get('/new/:id', (req, res) => {
 
 //CREATE
 router.post('/', (req, res) => {
-    const newAnime = {
-        title: req.params.title,
-        image: req.params.image,
-        synopsis: req.params.synopsis,
-        score: req.params.score,
-    }
-    planToWatch.create(newAnime, (err, createdAnime) => {
+    console.log(req.body)
+    planToWatch.create(req.body, (err, createdAnime) => {
         res.redirect('/plantowatch');
     })
 });
