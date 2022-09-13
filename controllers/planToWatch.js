@@ -5,12 +5,12 @@ const planToWatch = require('../models/planToWatch.js');
 
 //INDEX
 router.get('/', (req, res) => {
-    res.send('Hey')
-    // planToWatch.find({}, (err, anime) => {
-    //     res.render('planToWatch/index.ejs', {
-    //         anime: anime,
-    //     });
-    // })
+    planToWatch.find({}, (err, anime) => {
+        console.log(anime)
+        res.render('planToWatch/index.ejs', {
+            anime: anime,
+        });
+    })
 })
 
 //NEW
