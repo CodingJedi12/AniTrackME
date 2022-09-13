@@ -3,7 +3,7 @@
 </h1>
     <div>
 <%for (i = 0; i < anime.data.length; i ++) { %>
-            <a href="/<%=anime.data[i].mal_id%>"><img src="<%=anime.data[i].images.jpg.large_image_url%>" alt=""></a>
+            <a href="/anime/<%=anime.data[i].mal_id%>"><img src="<%=anime.data[i].images.jpg.large_image_url%>" alt=""></a>
             <%if (anime.data[i].title_english) { %>
                 <%=(anime.data[i].title_english)%>
             <%}%>

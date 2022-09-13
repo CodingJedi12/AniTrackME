@@ -30,7 +30,7 @@ db.on('disconnected', () => console.log('disconnected'));
 //==========================
 //ROUTES
 //==========================
-app.use('/', animeController);
+app.use('/anime', animeController);
 app.use('/plantowatch', planToWatchController);
 
 //==========================

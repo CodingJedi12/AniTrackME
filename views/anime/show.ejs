@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="/style.css">
   <head>
     <meta charset="utf-8" />
     <title> AniTrackMe | <%= anime.data.title %></title>
@@ -14,7 +13,7 @@
     <p>Synopsis: <%=anime.data.synopsis%></p>
   </body>
   <button><a href="/plantowatch/new/<%=anime.data.mal_id%>">Add to List</a></button>
-  <button><a href="/">Back to Anime</a></button>
+  <button><a href="/anime">Back to Anime</a></button>
 </html>
 
 <!-- want to create a search bar that utilizes the ?q=whatever-anime-title param to change what data is fetched and rendered to index -->
