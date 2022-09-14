@@ -9,32 +9,36 @@ router.get('/', (req, res) => {
         res.render('planToWatch/index.ejs', {
             anime: anime,
         });
-    })
-})
-
-//NEW
-
+    });
+});
 
 //DELETE
 router.delete('/:id', (req, res) => {
     planToWatch.findByIdAndDelete(req.params.id, () => {
         res.redirect('/plantowatch')
-    })
-})
+    });
+});
 //UPDATE
 
 //CREATE
 router.post('/', (req, res) => {
     planToWatch.create(req.body, (err, createdAnime) => {
         res.redirect('/plantowatch');
-    })
+    });
 });
 
 //EDIT
+router.get('/:id/edit', (req, res) => {
+    planToWatch.findById(req.params.id, (err, anime) => {
+        res.render('plantowatch/edit.ejs', {
+        anime: anime,
+        });
+    });
+});
 
 //SHOW
 router.get('/:id', (req, res) => {
 
-})
+});
 
 module.exports = router
