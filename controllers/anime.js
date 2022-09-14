@@ -5,12 +5,20 @@ const planToWatch = require('../models/planToWatch.js')
 
 //INDEX
 router.get('/', (req, res) => {
-    fetch('https://api.jikan.moe/v4/anime')
+    const url = 'https://api.jikan.moe/v4/anime'
+    fetch(url)
     .then((response) => response.json())
-    .then((data) => {
+    .then((json) => {
         res.render('anime/index.ejs', {
-            anime: data,
+            anime: json,
         })
+    }).catch(err => {
+        //handles errors by rendering error page:
+        console.error('Error', err);
+        res.render('anime/error.ejs', {
+            id: req.params.id,
+            url,
+        });
     });
 });
 
@@ -25,8 +33,8 @@ router.get('/', (req, res) => {
 //EDIT
 
 //SHOW
-router.get('/:id', (req, res) =>
-{const url = `https://api.jikan.moe/v4/anime/${req.params.id}`;
+router.get('/:id', (req, res) =>{
+    const url = `https://api.jikan.moe/v4/anime/${req.params.id}`;
 fetch(url)
     .then((response) => {
         // if our response from the API is NOT okay:
