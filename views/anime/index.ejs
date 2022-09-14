@@ -4,12 +4,12 @@
 <button><a href="/plantowatch">Plan to Watchlist</a></button>
     <div>
 <%for (i = 0; i < anime.data.length; i ++) { %>
-            <a href="/anime/<%=anime.data[i].mal_id%>"><img src="<%=anime.data[i].images.jpg.large_image_url%>" alt=""></a>
-            <%if (anime.data[i].title_english) { %>
-                <%=(anime.data[i].title_english)%>
-            <%}%>
-            <%if (anime.data[i].title_english === null) { %>
-                <%=(anime.data[i].title)%>
-           <% } %>
-           <% } %>
+    <%if (anime.data[i].title_english) { %>
+        <%=(anime.data[i].title_english)%>
+    <%}%>
+    <%if (anime.data[i].title_english === null) { %>
+        <%=(anime.data[i].title)%>
+   <% } %>
+    <a href="/anime/<%=anime.data[i].mal_id%>"><img src="<%=anime.data[i].images.jpg.large_image_url%>" alt=""></a>
+    <% } %>
     </div>

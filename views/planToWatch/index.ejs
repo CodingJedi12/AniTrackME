@@ -5,7 +5,10 @@
 <div>
    <% for(i = 0; i < anime.length; i++) { %> 
     <%= anime[i].title %> </br>
-    Audience score: <%= anime[i].audience_score%>/10</br>
+    Audience score: <%= anime[i].audienceScore%>/10
+    <% if(anime[i].userScore) { %>
+    User score: <%=anime[i].userScore%>/10
+    <%}%>
     <a href="/anime/<%=anime[i].mal_id%>"><img src="<%= anime[i].image %> " alt=""></a>
     <form action="/plantowatch/<%= anime[i]._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete" />
