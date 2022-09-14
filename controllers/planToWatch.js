@@ -19,6 +19,12 @@ router.delete('/:id', (req, res) => {
     });
 });
 //UPDATE
+router.put('/:id', (req, res) => {
+    req.body.haveWatched = req.body.haveWatched === "on" || false;
+    planToWatch.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, anime) => {
+        res.redirect('/plantowatch')
+    })
+})
 
 //CREATE
 router.post('/', (req, res) => {
