@@ -6,6 +6,7 @@ const planToWatchSchema = new Schema ({
     image: {type: String, required: true},
     synopsis: {type: String, required: true},
     audience_score: {type: Number, required: true},
+    haveWatched: {type: Boolean, default: false},
     mal_id: {type: Number, required: true},
 });
 
