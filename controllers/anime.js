@@ -22,6 +22,9 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/search', (req, res) => {
+   res.render('partials/searchPartial.ejs')
+});
 //NEW
 
 //DELETE
