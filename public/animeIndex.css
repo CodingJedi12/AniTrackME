@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(187, 32, 32);
+    color: black;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+.header {
+    font-size: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    border-radius: 6px;
+}
+
+.index-anime {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.individual-anime {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.index-image {
+    width:  250px;
+    height: 400px;
+    object-fit: cover;
+    border: 5px solid black;
+    border-radius: 6px;
+}

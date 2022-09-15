@@ -1,18 +1,42 @@
-<h1>
-    Welcome to AniTrackMe!
-</h1>
-<div id="buttons">
-    <button><a href="/plantowatch">Plan to Watchlist</a></button>
-</div>
-<%- include ('../partials/searchPartial.ejs') %> 
-    <div>
-<%for (i = 0; i < anime.data.length; i ++) { %>
-   <h3><%if (anime.data[i].title_english) { %>
-        <%=(anime.data[i].title_english)%>
-    <%}%>
-    <%if (anime.data[i].title_english === null) { %>
-        <%=(anime.data[i].title)%>
-   <% } %></h3>
-    <a href="/anime/<%=anime.data[i].mal_id%>"><img src="<%=anime.data[i].images.jpg.large_image_url%>" alt=""></a></br>
-    <% } %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/animeIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniTrackMe</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            Welcome to AniTrackMe!
+        </h1>
+        <div id="buttons">
+            <button><a href="/plantowatch">Plan to Watchlist</a></button>
+        </div>
     </div>
+    <%- include ('../partials/searchPartial.ejs') %>
+    <div class="index-anime">
+        <%for (i=0; i < anime.data.length; i ++) { %>
+            <div class="individual-anime">
+                <h3>
+                    <%if (anime.data[i].title_english) { %>
+                        <%=(anime.data[i].title_english)%>
+                    <%}%>
+                    <%if (anime.data[i].title_english===null) { %>
+                        <%=(anime.data[i].title)%>
+                        <% } %>
+                </h3>
+                <a href="/anime/<%=anime.data[i].mal_id%>"><img class="index-image" src="<%=anime.data[i].images.jpg.large_image_url%>" alt=""></a></br>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>
