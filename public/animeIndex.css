@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(187, 32, 32);
+    background-color: rgb(158, 53, 53);
     color: black;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
@@ -24,17 +24,23 @@ body {
 
 .individual-anime {
     width: 300px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
 }
 
 .index-image {
     width:  250px;
-    height: 400px;
+    min-height: 380px;
+    max-height: 400px;
     object-fit: cover;
     border: 5px solid black;
     border-radius: 6px;
+}
+
+.index-title {
+    padding: 2px;
+    margin-bottom: 5px;
 }
