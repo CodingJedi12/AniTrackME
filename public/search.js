@@ -26,7 +26,7 @@ searchButton.addEventListener('click', e => {
                 const markup = `
                 <div id="anime_${id}">
                 <h3>${title}</h3>
-                <a href="/anime/${id}"><img src="${image}></a>
+                <a href="/anime/${id}"><img src="${image}"></a>
                 </div>
                 `
 
