@@ -1,9 +1,10 @@
 <h1>
     Welcome to AniTrackMe!
 </h1>
-
-<button><a href="/plantowatch">Plan to Watchlist</a></button>
-<button><a href="/anime/search">Search your Own</a></button>
+<div id="buttons">
+    <button><a href="/plantowatch">Plan to Watchlist</a></button>
+</div>
+<%- include ('../partials/searchPartial.ejs') %> 
     <div>
 <%for (i = 0; i < anime.data.length; i ++) { %>
    <h3><%if (anime.data[i].title_english) { %>

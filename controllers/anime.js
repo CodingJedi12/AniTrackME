@@ -5,7 +5,7 @@ const planToWatch = require('../models/planToWatch.js')
 
 //INDEX
 router.get('/', (req, res) => {
-    const url = 'https://api.jikan.moe/v4/anime'
+    const url = 'https://api.jikan.moe/v4/top/anime'
     fetch(url)
     .then((response) => response.json())
     .then((json) => {
@@ -22,9 +22,6 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/search', (req, res) => {
-   res.render('partials/searchPartial.ejs')
-});
 //NEW
 
 //DELETE
