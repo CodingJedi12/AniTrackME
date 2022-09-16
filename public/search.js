@@ -1,5 +1,5 @@
 const searchButton = document.getElementById('search-button');
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 searchButton.addEventListener('click', e => {
     e.preventDefault();

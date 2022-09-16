@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const planToWatch = require('../models/planToWatch.js');
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 //INDEX
 router.get('/', (req, res) => {
