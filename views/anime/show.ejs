@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="/animeShow.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <meta charset="utf-8" />
-    <title> AniTrackMe | <%= anime.data.title %></title>
-  </head>
-  <body>
-    <h1 id="anime-title"><%= anime.data.title %></h1> 
-    <h2 id="anime-score">Score: <%= anime.data.score %>/10</h2>
+
+<head>
+  <link rel="stylesheet" href="/animeShow.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <title> AniTrackMe | <%= anime.data.title %>
+  </title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-title">
+      <h1 id="anime-title">
+        <%= anime.data.title %>
+      </h1>
+      <h2 id="anime-score">Score: <%= anime.data.score %>/10</h2>
+    </div>
+  </div>
+  <div class="show-content">
     <img id="anime-image" src="<%=anime.data.images.jpg.large_image_url%>" alt="">
-    <p id="anime-genre">Genres: <%= genres %> </p>
-    <p id="anime-synopsis">Synopsis: <%=anime.data.synopsis%></p>
-  </body>
-  <section id="anime-buttons">
-    <form action="/plantowatch" method="POST">
-      <input type="hidden" name="title" value="<%= anime.data.title %>"/>
-      <input type="hidden" name="image" value="<%=anime.data.images.jpg.large_image_url%>">
-      <input type="hidden" name="synopsis" value="<%=anime.data.synopsis%>">
-      <input type="hidden" name="audienceScore" value="<%= anime.data.score %>">
-      <input type="hidden" name="mal_id" value="<%= anime.data.mal_id %>">
-      <input type="submit" value="Add to Plan to Watch" />
-    </form>
-  
-    <button><a href="/anime">Back to Anime</a></button>
-    <button><a href="/plantowatch">Back to Watchlist</a></button>
-  </section>
-  
+    <div class="show-body">
+      <p id="anime-genre">Genres: <%= genres %>
+      </p>
+      <p id="anime-synopsis">Synopsis: <%=anime.data.synopsis%>
+      </p>
+    </div>
+  </div>
+</body>
+<section id="anime-buttons">
+  <form action="/plantowatch" method="POST">
+    <input type="hidden" name="title" value="<%= anime.data.title %>" />
+    <input type="hidden" name="image" value="<%=anime.data.images.jpg.large_image_url%>">
+    <input type="hidden" name="synopsis" value="<%=anime.data.synopsis%>">
+    <input type="hidden" name="audienceScore" value="<%= anime.data.score %>">
+    <input type="hidden" name="mal_id" value="<%= anime.data.mal_id %>">
+    <input type="submit" value="Add to Plan to Watch" />
+  </form>
+
+  <button><a href="/anime">Back to Anime</a></button>
+  <button><a href="/plantowatch">Back to Watchlist</a></button>
+</section>
+
 </html>

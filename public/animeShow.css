@@ -1,3 +1,54 @@
 body {
-    background-color: aqua;
+        background-color: rgb(158, 53, 53);
+        color: black;
+        text-align: center;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+}
+
+.header-title {
+    background-color: rgba(245, 245, 245, .5);
+    border: 5px solid black;
+    max-width: 500px;
+    align-self: center;
+    padding: 5px;
+}
+
+.header {
+    font-size: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    border-radius: 6px;
+    background-image: url('https://wallpaperaccess.com/full/538943.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.show-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    padding: 5px;
+}
+
+.show-body {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    text-align: left;
+}
+
+#anime-image {
+    box-shadow: 6px 6px black;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+#anime-synopsis {
+    line-height: 28px;
 }
