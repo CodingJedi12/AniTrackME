@@ -24,9 +24,9 @@ searchButton.addEventListener('click', e => {
                 const id = anime.mal_id;
 
                 const markup = `
-                <div id="anime_${id}">
-                <h3>${title}</h3>
-                <a href="/anime/${id}"><img src="${image}"></a>
+                <div class="individual-anime">
+                <h3 class="index-title">${title}</h3>
+                <a href="/anime/${id}"><img class="index-image" src="${image}"></a>
                 </div>
                 `
 

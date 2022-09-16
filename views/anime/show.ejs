@@ -15,15 +15,16 @@
     <p id="anime-genre">Genres: <%= genres %> </p>
     <p id="anime-synopsis">Synopsis: <%=anime.data.synopsis%></p>
   </body>
-  <form action="/plantowatch" method="POST">
-    <input type="hidden" name="title" value="<%= anime.data.title %>"/>
-    <input type="hidden" name="image" value="<%=anime.data.images.jpg.large_image_url%>">
-    <input type="hidden" name="synopsis" value="<%=anime.data.synopsis%>">
-    <input type="hidden" name="audienceScore" value="<%= anime.data.score %>">
-    <input type="hidden" name="mal_id" value="<%= anime.data.mal_id %>">
-    <input type="submit" value="Add to Plan to Watch" />
-</form>
   <section id="anime-buttons">
+    <form action="/plantowatch" method="POST">
+      <input type="hidden" name="title" value="<%= anime.data.title %>"/>
+      <input type="hidden" name="image" value="<%=anime.data.images.jpg.large_image_url%>">
+      <input type="hidden" name="synopsis" value="<%=anime.data.synopsis%>">
+      <input type="hidden" name="audienceScore" value="<%= anime.data.score %>">
+      <input type="hidden" name="mal_id" value="<%= anime.data.mal_id %>">
+      <input type="submit" value="Add to Plan to Watch" />
+    </form>
+  
     <button><a href="/anime">Back to Anime</a></button>
     <button><a href="/plantowatch">Back to Watchlist</a></button>
   </section>

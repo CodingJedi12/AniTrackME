@@ -6,6 +6,13 @@ body {
     font-size: 12px;
 }
 
+.header-title {
+    background-color: rgba(245, 245, 245, .5);
+    border: 5px solid black;
+    max-width: 500px;
+    align-self: center;
+}
+
 .header {
     font-size: 18px;
     padding: 30px;
@@ -13,6 +20,15 @@ body {
     flex-direction: column;
     border: 5px solid black;
     border-radius: 6px;
+    background-image: url('https://wallpaperaccess.com/full/538943.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#search-form {
+    max-height: 22px;
+    margin: 5px;
 }
 
 .index-anime {
@@ -41,6 +57,9 @@ body {
 }
 
 .index-title {
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
     padding: 2px;
     margin-bottom: 5px;
 }
