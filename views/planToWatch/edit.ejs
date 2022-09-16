@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/watchIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@700&display=swap"
+        rel="stylesheet">
     <meta charset="utf-8" />
     <title> AniTrackMe | Edit </title>
   </head>
   <body>
-    <h1>Edit:</h1>
+    <div class="header">
+      <div class="header-title">
+        <h1>Edit:</h1>
+      </div>
+    </div>
     <form action="/plantowatch/<%=anime._id%>/?_method=PUT" method="POST">
     <input type="hidden" name="title" value="<%= anime.title %>"/>
     <input type="hidden" name="image" value="<%=anime.image%>">

@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(158, 53, 53);
+    color: black;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+.header-title {
+    background-color: rgba(245, 245, 245, .5);
+    border: 5px solid black;
+    max-width: 500px;
+    align-self: center;
+    padding: 5px;
+}
+
+.header {
+    font-size: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    border-radius: 6px;
+    background-image: url('https://wallpaperaccess.com/full/538943.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}

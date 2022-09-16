@@ -1,19 +1,50 @@
-<h1>
-    Your Watchlist
-</h1>
-<button><a href="/anime">Anime List</a></button>
-<div>
-   <% for(i = 0; i < anime.length; i++) { %> 
-    <h3><%= anime[i].title %></h3>
-    <p>Audience score: <%= anime[i].audienceScore%>/10
-    <% if(anime[i].haveWatched) {%>
-    User score: <%=anime[i].userScore%>/10
-    Completed
-    <%}%></p>
-    <a href="/anime/<%=anime[i].mal_id%>"><img src="<%= anime[i].image %> " alt=""></a>
-    <form action="/plantowatch/<%= anime[i]._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete" />
-    </form>
-    <button><a href="/plantowatch/<%= anime[i]._id %>/edit">Edit</a></button></br>
-    <% } %> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/watchIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</html>
+<div class="header">
+    <div class="header-title">
+        <h1>
+            Your Watchlist
+        </h1>
+    </div>
+    <div class="buttons">
+    <button><a href="/anime">Anime List</a></button>
+    </div>
 </div>
+<div class="index-anime">
+    <% for(i=0; i < anime.length; i++) { %>
+        <div class="individual-anime">
+            <h3 class="index-title">
+                <%= anime[i].title %>
+            </h3>
+            <p>Audience score: <%= anime[i].audienceScore%>/10
+            </p>
+            <% if(anime[i].haveWatched) {%>
+            <p>User score: <%=anime[i].userScore%>/10
+                    Completed</p>
+                    <%}%>
+            <a href="/anime/<%=anime[i].mal_id%>"><img class="index-image"src="<%= anime[i].image %> " alt=""></a>
+            <form action="/plantowatch/<%= anime[i]._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete" />
+            </form>
+            <button class="buttons"><a href="/plantowatch/<%= anime[i]._id %>/edit">Edit</a></button></br>
+        </div>
+        <% } %>
+</div>
+
+</body>
