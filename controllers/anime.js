@@ -1,7 +1,8 @@
 //DEPENDENCIES
 const express = require('express');
 const router = express.Router();
-const planToWatch = require('../models/planToWatch.js')
+const planToWatch = require('../models/planToWatch.js');
+import fetch from 'node-fetch';
 
 //INDEX
 router.get('/', (req, res) => {
