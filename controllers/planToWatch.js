@@ -15,28 +15,28 @@ router.get('/', (req, res) => {
 //DELETE
 router.delete('/:id', (req, res) => {
     planToWatch.findByIdAndDelete(req.params.id, () => {
-        res.redirect('/plantowatch')
+        res.redirect('/planToWatch')
     });
 });
 //UPDATE
 router.put('/:id', (req, res) => {
     req.body.haveWatched = req.body.haveWatched === "on" || false;
     planToWatch.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, anime) => {
-        res.redirect('/plantowatch')
+        res.redirect('/planToWatch')
     })
 })
 
 //CREATE
 router.post('/', (req, res) => {
     planToWatch.create(req.body, (err, createdAnime) => {
-        res.redirect('/plantowatch');
+        res.redirect('/planToWatch');
     });
 });
 
 //EDIT
 router.get('/:id/edit', (req, res) => {
     planToWatch.findById(req.params.id, (err, anime) => {
-        res.render('plantowatch/edit.ejs', {
+        res.render('planToWatch/edit.ejs', {
         anime: anime,
         });
     });
