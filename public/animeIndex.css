@@ -59,7 +59,7 @@ body {
 
 .index-image:hover {
     cursor: pointer;
-    width: 275px;
+    transform: translate3D(0,-1px,0) scale(1.03);
     border: 5px solid white;
 }
 
