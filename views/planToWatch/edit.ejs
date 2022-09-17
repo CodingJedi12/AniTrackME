@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/watchIndex.css">
+    <link rel="stylesheet" href="/watchEdit.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@700&display=swap"
@@ -12,19 +12,21 @@
   <body>
     <div class="header">
       <div class="header-title">
-        <h1>Edit:</h1>
+        <h1>Your Score</h1>
       </div>
     </div>
-    <form action="/plantowatch/<%=anime._id%>/?_method=PUT" method="POST">
-    <input type="hidden" name="title" value="<%= anime.title %>"/>
-    <input type="hidden" name="image" value="<%=anime.image%>">
-    <input type="hidden" name="synopsis" value="<%=anime.synopsis%>">
-    <input type="hidden" name="audienceScore" value="<%= anime.audienceScore %>">
-    <input type="hidden" name="mal_id" value="<%= anime.mal_id %>">
-    Have you seen this anime?<input type="checkbox" name="haveWatched">
-    What is your rating 1-10?<input type="number" max="10" min="1" step=".01" name="userScore">
-    <input type="submit" value="Submit">
-</form>
+  <ul>
+      <form action="/plantowatch/<%=anime._id%>/?_method=PUT" method="POST">
+      <input type="hidden" name="title" value="<%= anime.title %>"/>
+      <input type="hidden" name="image" value="<%=anime.image%>">
+      <input type="hidden" name="synopsis" value="<%=anime.synopsis%>">
+      <input type="hidden" name="audienceScore" value="<%= anime.audienceScore %>">
+      <input type="hidden" name="mal_id" value="<%= anime.mal_id %>">
+      <li>Have you seen this anime?<input type="checkbox" name="haveWatched"></li>
+      <li>What is your rating 1-10?<input type="number" max="10" min="1" step=".01" name="userScore">
+      <input type="submit" value="Submit"></li>
+    </form>
+  </ul>
   </body>
   <button><a href="/anime">Back to Anime</a></button>
   <button><a href="/plantowatch">Back to Watchlist</a></button>

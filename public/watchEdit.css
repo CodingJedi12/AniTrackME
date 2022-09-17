@@ -26,3 +26,30 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 2px;
+}
+
+@media (max-width: 560px) {
+    body {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    li {
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
