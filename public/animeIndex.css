@@ -77,3 +77,34 @@ body {
 .buttons {
     width: 55px;
 }
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 8px;
+    }
+    .header {
+        font-size: 8px;
+        margin: 2px;
+    }
+    .header-title {
+        border: 2px solid black;
+        max-width: 200px;
+        margin-bottom: 2px;
+    }
+    .individual-anime {
+        width: 120px;
+        height: 160px;
+    }
+    .index-image {
+        width:  65px;
+        min-height: 100px;
+        max-height: 110px;
+        border: 2px solid black;
+    }.index-title {
+        font-size: 8px;
+    }
+    p {
+        font-size: 6px;
+        margin: 2px;
+    }
+}

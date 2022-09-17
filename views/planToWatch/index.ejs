@@ -39,10 +39,12 @@
                     Completed</p>
                     <%}%>
             <a href="/anime/<%=anime[i].mal_id%>"><img class="index-image"src="<%= anime[i].image %> " alt=""></a>
-            <form action="/plantowatch/<%= anime[i]._id %>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete" />
-            </form>
-            <button class="buttons"><a href="/plantowatch/<%= anime[i]._id %>/edit">Edit</a></button></br>
+            <div class="buttons">
+                <form id='delete' action="/plantowatch/<%= anime[i]._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" />
+                </form>
+                <button id="edit"><a href="/plantowatch/<%= anime[i]._id %>/edit">Edit</a></button></br>
+            </div>
         </div>
         <% } %>
 </div>
