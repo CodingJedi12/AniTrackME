@@ -23,7 +23,8 @@ body {
     border-radius: 6px;
     background-image: url('https://wallpaperaccess.com/full/538943.jpg');
     background-attachment: fixed;
-    background-size: 2180px;
+    background-position: left;
+    background-size: cover;
 }
 
 #search-form {
@@ -84,7 +85,8 @@ body {
     .header {
         font-size: 8px;
         margin: 2px;
-        background-size: 850px;
+        background-position: left;
+        background-size: cover;
     }
     .header-title {
         border: 2px solid black;
@@ -92,7 +94,7 @@ body {
         margin-bottom: 2px;
     }
     .individual-anime {
-        width: 120px;
+        width: 119px;
         height: 160px;
     }
     .index-image {
@@ -116,7 +118,8 @@ body {
     .header {
         font-size: 8px;
         margin: 2px;
-        background-size: 1260px;
+        background-position: left;
+        background-size: cover;
     }
     .header-title {
         border: 2px solid black;

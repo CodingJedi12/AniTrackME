@@ -88,7 +88,8 @@ p {
     .header {
         font-size: 8px;
         margin: 2px;
-        background-size: 850px;
+        background-position: left;
+        background-size: cover;
     }
     .header-title {
         border: 2px solid black;
@@ -121,7 +122,8 @@ p {
     .header {
         font-size: 8px;
         margin: 2px;
-        background-size: 1260px;
+        background-position: left;
+        background-size: cover;
     }
     .header-title {
         border: 2px solid black;
