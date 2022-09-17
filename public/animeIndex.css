@@ -22,9 +22,8 @@ body {
     border: 5px solid black;
     border-radius: 6px;
     background-image: url('https://wallpaperaccess.com/full/538943.jpg');
-    background-position: center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 2180px;
 }
 
 #search-form {
@@ -85,6 +84,7 @@ body {
     .header {
         font-size: 8px;
         margin: 2px;
+        background-size: 850px;
     }
     .header-title {
         border: 2px solid black;
@@ -116,6 +116,7 @@ body {
     .header {
         font-size: 8px;
         margin: 2px;
+        background-size: 1260px;
     }
     .header-title {
         border: 2px solid black;
