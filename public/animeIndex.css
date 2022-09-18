@@ -131,15 +131,15 @@ body {
         height: 480px; */
         
         width: 180px;
-        height: 220px;
+        height: 240px;
     }
     .index-image {
         /*  width:  250px;
     min-height: 380px;
     max-height: 400px; */
         width:  150px;
-        min-height: 160px;
-        max-height: 175px;
+        min-height: 190px;
+        max-height: 205px;
         border: 2px solid black;
     }.index-title {
         font-size: 8px;

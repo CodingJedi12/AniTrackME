@@ -97,13 +97,13 @@ p {
         margin-bottom: 2px;
     }
     .individual-anime {
-        width: 120px;
-        height: 210px;
+        width: 180px;
+        height: 275px;
     }
     .index-image {
-        width:  80px;
-        min-height: 105px;
-        max-height: 120px;
+        width:  150px;
+        min-height: 185px;
+        max-height: 205x;
         border: 2px solid black;
         margin-bottom: 2px;
     }.index-title {
@@ -142,8 +142,8 @@ p {
     min-height: 380px;
     max-height: 400px; */
         width:  150px;
-        min-height: 160px;
-        max-height: 175px;
+        min-height: 185px;
+        max-height: 205px;
         border: 2px solid black;
     }.index-title {
         font-size: 8px;
